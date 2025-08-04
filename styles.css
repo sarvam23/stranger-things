@@ -1,0 +1,28 @@
+/* Additional styles for dark mode extension */
+
+/* Smooth transitions for mode switching */
+* {
+  transition: background-color 0.3s ease, color 0.3s ease !important;
+}
+
+/* Ensure proper contrast in dark mode */
+html[data-dark-mode="true"] input,
+html[data-dark-mode="true"] textarea,
+html[data-dark-mode="true"] select {
+  background-color: #2d2d2d !important;
+  color: #ffffff !important;
+  border: 1px solid #555 !important;
+}
+
+html[data-dark-mode="true"] button {
+  background-color: #404040 !important;
+  color: #ffffff !important;
+  border: 1px solid #666 !important;
+}
+
+/* Fix for some common elements that might not invert well */
+html[data-dark-mode="true"] .highlight,
+html[data-dark-mode="true"] .selected,
+html[data-dark-mode="true"] .active {
+  filter: invert(1) hue-rotate(180deg) !important;
+}
